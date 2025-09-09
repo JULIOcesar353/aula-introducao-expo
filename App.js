@@ -7,16 +7,16 @@ import Exemplo01 from './src/exemplos/ex01';
 
 import Exemplo02 from './src/exemplos/ex02';
 
-import AtividadeCamisa from './src/atividades/atv02'
+import AtividadeCamisa from './src/atividades/atv02';
 
 import Exemplo03 from './src/exemplos/ex03';
 
-import ProjetoIphone from './src/projeto';
+import AtividadeBotoes from './src/exemplos/atvIncDec';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo03/>
+      <AtividadeBotoes/>
       <StatusBar style="auto" />
     </View>
   );
