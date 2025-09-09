@@ -10,7 +10,7 @@ const styles = StyleSheet.create(
             backgroundColor: 'deepskyblue',
             borderWidth: RFPercentage(0.6),
             width: '90%',
-            allignItems: 'center',
+            alignItems: 'center',
             borderRadius: 20,
             marginBottom: RFPercentage(1),
         },
@@ -19,6 +19,7 @@ const styles = StyleSheet.create(
             color: '#121212',
             fontWeight: 'bold',
             marginBottom: RFPercentage(1),
+            justifyContent: 'center',
         },
         texto: {
             // height: RFPercentage(10),
