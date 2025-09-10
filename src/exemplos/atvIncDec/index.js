@@ -11,9 +11,11 @@ export default function AtividadeBotoes() {
     function handleIncrementar() {
         setNumero(numero + 1);
     }
+
     function handleDecrementar() {
         setNumero(numero - 1);
     }
+
     function handleLimpar() {
         setNumero(0);
     }
@@ -24,6 +26,7 @@ export default function AtividadeBotoes() {
 
             <View style={styles.global}>
                 <View style={styles.box}>
+
                     <View style={styles.left}>
                         <TouchableOpacity
                             style={styles.botao}

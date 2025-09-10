@@ -14,6 +14,9 @@ const styles = StyleSheet.create(
         txt: {
             fontSize: RFPercentage(4),
             fontWeight: 'bold',
+            // borderWidth: RFPercentage(0.1),
+            // width: '70%',
+            alignItems: 'center',
         },
         botao: {
             backgroundColor: '#777',
@@ -21,11 +24,11 @@ const styles = StyleSheet.create(
             borderRadius: RFPercentage(1),
             padding: RFPercentage(1),
             alignItems: 'center',
+            
         },
         botaoL: {
             backgroundColor: '#777',
             width: RFPercentage(25),
-
             padding: RFPercentage(1),
             alignItems: 'center',
         },
@@ -33,35 +36,25 @@ const styles = StyleSheet.create(
             color: '#FF1',
             fontSize: RFPercentage(2),
             fontWeight: 'bold',
+            alignItems: 'center',
         },
         box: {
-
             flexDirection: 'row',
         },
         left: {
-
-
             width: '33.3%',
             height: '80%',
             alignItems: 'center',
-
         },
         center: {
-
-
             width: '33.3%',
             height: '80%',
             alignItems: 'center',
-
-
         },
         right: {
-
             alignItems: 'center',
-
             width: '33.3%',
             height: '80%',
-
         },
 
         global: {
@@ -70,8 +63,6 @@ const styles = StyleSheet.create(
             height: RFPercentage(12),
             flexDirection: 'row',
             alignItems: 'center',
-
-
         },
     }
 );
