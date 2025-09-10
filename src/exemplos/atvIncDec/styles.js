@@ -14,29 +14,27 @@ const styles = StyleSheet.create(
         txt: {
             fontSize: RFPercentage(4),
             fontWeight: 'bold',
-            // borderWidth: RFPercentage(0.1),
-            // width: '70%',
-            alignItems: 'center',
         },
         botao: {
             backgroundColor: '#777',
-            width: '60%',
-            borderRadius: RFPercentage(1),
-            padding: RFPercentage(1),
+            width: '75%',
+            borderRadius: 50,
+            padding: RFPercentage(0.5),
             alignItems: 'center',
-            
+            justifyContent: 'center',            
         },
         botaoL: {
             backgroundColor: '#777',
             width: RFPercentage(25),
             padding: RFPercentage(1),
+            borderRadius: 50,
             alignItems: 'center',
+            marginTop: '1%',
         },
         txtBotao: {
             color: '#FF1',
-            fontSize: RFPercentage(2),
+            fontSize: RFPercentage(4),
             fontWeight: 'bold',
-            alignItems: 'center',
         },
         box: {
             flexDirection: 'row',
@@ -48,8 +46,10 @@ const styles = StyleSheet.create(
         },
         center: {
             width: '33.3%',
-            height: '80%',
             alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#aaa',
+            borderRadius: 20,
         },
         right: {
             alignItems: 'center',
@@ -61,6 +61,7 @@ const styles = StyleSheet.create(
             backgroundColor: '#555',
             width: RFPercentage(25),
             height: RFPercentage(12),
+            borderRadius: 20,
             flexDirection: 'row',
             alignItems: 'center',
         },

@@ -14,6 +14,9 @@ export default function AtividadeBotoes() {
 
     function handleDecrementar() {
         setNumero(numero - 1);
+        // if(numero <= 0){
+        //     setNumero(0);
+        // }
     }
 
     function handleLimpar() {
