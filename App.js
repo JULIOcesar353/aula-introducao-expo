@@ -11,12 +11,12 @@ import AtividadeCamisa from './src/atividades/atv02';
 
 import Exemplo03 from './src/exemplos/ex03';
 
-import AtividadeBotoes from './src/exemplos/atvIncDec';
+import Atividade3 from './src/atividades/atv03';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AtividadeBotoes/>
+      <Atividade3/>
       <StatusBar style="auto" />
     </View>
   );

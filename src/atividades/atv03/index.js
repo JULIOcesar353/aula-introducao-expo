@@ -3,7 +3,7 @@ import { View, Text, Button, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
-export default function AtividadeBotoes() {
+export default function Atividade3() {
 
     const [numero, setNumero] = useState(0);
     console.log(numero);
@@ -14,9 +14,6 @@ export default function AtividadeBotoes() {
 
     function handleDecrementar() {
         setNumero(numero - 1);
-        // if(numero <= 0){
-        //     setNumero(0);
-        // }
     }
 
     function handleLimpar() {
@@ -26,6 +23,9 @@ export default function AtividadeBotoes() {
 
     return (
         <View style={styles.container}>
+            <View style={styles.posicao}>
+                <Text style={styles.tituloTxt}>Atividade 3</Text>
+            </View>
 
             <View style={styles.global}>
                 <View style={styles.box}>
@@ -54,9 +54,6 @@ export default function AtividadeBotoes() {
 
 
                 </View>
-
-
-
 
             </View>
             <TouchableOpacity
