@@ -3,7 +3,7 @@ import { View, Text, TextInput, Touchable, TouchableOpacity } from 'react-native
 
 import styles from './styles';
 
-export default function Exemplo04() {
+export default function Atividade4() {
 
     const [texto, setTexto] = useState('');
     const [texto2, setTexto2] = useState('Valor Inicial');
@@ -16,23 +16,25 @@ export default function Exemplo04() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 4</Text>
+            <Text style={styles.titulo}>Atividade 04</Text>
 
+            <Text style={styles.legenda}>Nome:</Text>
             <Text style={styles.txt}>{texto}</Text>
             <TextInput
                 value={texto}
                 onChangeText={setTexto}
-                placeholder='texto de fundo'
+                placeholder='informe seu nome...'
                 keyboardType='ascii-capable'
                 style={styles.textInput}
             />
 
 
+            <Text style={styles.legenda}>Sobrenome:</Text>
             <Text style={styles.txt}>{mensagem}</Text>
             <TextInput
                 value={texto2}
                 onChangeText={setTexto2}
-                placeholder='digite sua mensagem'
+                placeholder='seu sobrenome...'
                 keyboardType='ascii-capable'
                 style={styles.textInput}
             />

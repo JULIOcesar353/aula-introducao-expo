@@ -17,7 +17,7 @@ function Exemplo02 (){
             <Card
                 imagem={img1}
                 nome={'KWID'}
-                descricao={'Carrinho de vagabundo'}
+                descricao={'Carrinho de boiola'}
                 valor={'R$1.000.000,99'}> 
             </Card>
 

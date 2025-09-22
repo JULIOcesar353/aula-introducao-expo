@@ -7,7 +7,7 @@ const styles = StyleSheet.create(
     {
         container: {
             flex: 1,
-            backgroundColor: '#aaa',
+            backgroundColor: '#f44',
             alignItems: 'center',
         },
         titulo: {
@@ -21,11 +21,10 @@ const styles = StyleSheet.create(
             borderRadius: RFPercentage(5),
             paddingRight: RFPercentage(2),
             paddingLeft: RFPercentage(2),
-            backgroundColor: '#ddd',
+            backgroundColor: '#e99',
         },
         txt: {
             fontSize: RFPercentage(2.5),
-            marginTop: RFPercentage(0.5),
             alignItems: 'center',
         },
         textInput: {
@@ -37,7 +36,6 @@ const styles = StyleSheet.create(
             fontWeight: 'bold',
             borderRadius: RFPercentage(2.5),
             padding: RFPercentage(1),
-            margin: RFPercentage(1),
         },
         botao: {
             marginTop: RFPercentage(2.5),
@@ -55,6 +53,16 @@ const styles = StyleSheet.create(
             fontWeight: 'bold',
             textAlign: 'center',
         },
+        legenda: {
+            borderColor: '#000',
+            width: '60%',
+            textAlign: 'left',
+            fontWeight: 'bold',
+            padding: RFPercentage(1),
+            margin: RFPercentage(1),
+            fontSize: RFPercentage(2.5),
+            marginBottom: RFPercentage(-3),
+        }
     }
 );
 
