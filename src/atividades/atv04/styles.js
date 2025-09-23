@@ -36,6 +36,8 @@ const styles = StyleSheet.create(
             fontWeight: 'bold',
             borderRadius: RFPercentage(2.5),
             padding: RFPercentage(1),
+            backgroundColor: '#f77',
+            marginTop: RFPercentage(1),
         },
         botao: {
             marginTop: RFPercentage(2.5),
@@ -59,9 +61,7 @@ const styles = StyleSheet.create(
             textAlign: 'left',
             fontWeight: 'bold',
             padding: RFPercentage(1),
-            margin: RFPercentage(1),
             fontSize: RFPercentage(2.5),
-            marginBottom: RFPercentage(-3),
         }
     }
 );

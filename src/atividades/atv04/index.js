@@ -6,12 +6,13 @@ import styles from './styles';
 export default function Atividade4() {
 
     const [texto, setTexto] = useState('');
-    const [texto2, setTexto2] = useState('Valor Inicial');
-    const [mensagem, setMensagem] = useState('');
+    const [texto2, setTexto2] = useState('');
+    const [name, setName] = useState('-');
 
     function handleExibeMensagem() {
-        setMensagem(texto2);
+        setName(`${texto} ${texto2}`);
         setTexto2('');
+        setTexto('');
     }
 
     return (
@@ -19,7 +20,6 @@ export default function Atividade4() {
             <Text style={styles.titulo}>Atividade 04</Text>
 
             <Text style={styles.legenda}>Nome:</Text>
-            <Text style={styles.txt}>{texto}</Text>
             <TextInput
                 value={texto}
                 onChangeText={setTexto}
@@ -30,7 +30,6 @@ export default function Atividade4() {
 
 
             <Text style={styles.legenda}>Sobrenome:</Text>
-            <Text style={styles.txt}>{mensagem}</Text>
             <TextInput
                 value={texto2}
                 onChangeText={setTexto2}
@@ -38,6 +37,8 @@ export default function Atividade4() {
                 keyboardType='ascii-capable'
                 style={styles.textInput}
             />
+
+            <Text style={styles.textInput}>{name}</Text>
 
             <TouchableOpacity
                 style={styles.botao}
