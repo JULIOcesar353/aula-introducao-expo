@@ -28,7 +28,7 @@ export default function Atividade5() {
       setTotal(parseInt(texto) * parseInt(texto2));
     }
     if (operacao == 4) {
-      setTotal(parseInt(texto) / parseInt(texto2));
+      setTotal(parseFloat(texto) / parseFloat(texto2));
     }
   }
 
