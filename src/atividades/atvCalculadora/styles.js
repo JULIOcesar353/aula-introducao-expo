@@ -8,14 +8,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   visor: {
-    width: '95%',
-    height: '15%',
-    justifyContent: 'center',
     borderRadius: 20,
     // borderWidth: RFPercentage(0.1),
     // borderColor: 'white',
     top: '20%',
-    padding: '2%'
+    // padding: '2%'
+    width: '100%',
+    minHeight: 80,
+    justifyContent: "center",
+    paddingHorizontal: 10,
   },
   number: {
     color: 'white',
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
   txtBotoes: {
     fontSize: RFPercentage(4.5),
     color: '#fff',
-  }
+  },
 });
 
 export default styles;
