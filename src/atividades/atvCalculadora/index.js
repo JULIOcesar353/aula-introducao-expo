@@ -19,47 +19,53 @@ export default function AtvCalculador() {
 
   const [substituir, setSubstituir] = useState(true);
 
-  function valueAtual(val) {
-    // AC já está separado, então val != 10 aqui
-    if (substituir) {
-      setValor1(String(val)); // substitui o visor
-      setSubstituir(false);
-    } else {
-      setValor1(prev => prev + String(val)); // opcional, concatena após o primeiro número
+  //modo: 1-substituir, 2- limpaVisor, 3-operacoes, 4-apagarUltimo
+  function valueAtual(val, modo, tipo) {
+    if (modo == 1) {
+      // AC já está separado, então val != 10 aqui
+      if (substituir) {
+        setValor1(String(val)); // substitui o visor
+        setSubstituir(false);
+      } else {
+        setValor1(prev => prev + String(val)); // opcional, concatena após o primeiro número
+      }
+      setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 0);
     }
-    setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 0);
-  }
 
-  function limparVisor() {
-    setValor1('0');
-    setSubstituir(true); // próximo número substitui
-    setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 0);
-  }
 
-  function operacoes(tipo) {
-    if (verificaMomento) {
-      if ((tipo == 1)) {
-        setValor1(`${valor1}+`);
-        setVerificaMomento(false);
-      }
-      if (tipo == 2) {
-        setValor1(`${valor1}−`);
-        setVerificaMomento(false);
-      }
-      if (tipo == 3) {
-        setValor1(`${valor1}×`);
-        setVerificaMomento(false);
-      }
-      if (tipo == 4) {
-        setValor1(`${valor1}÷`);
-        setVerificaMomento(false);
+    else if (modo == 2) {
+      setValor1('0');
+      setSubstituir(true); // próximo número substitui
+      setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 0);
+    }
+
+
+    else if (modo == 3) {
+      if (verificaMomento) {
+        if ((tipo == 1)) {
+          setValor1(`${valor1}+`);
+          setVerificaMomento(false);
+        }
+        if (tipo == 2) {
+          setValor1(`${valor1}−`);
+          setVerificaMomento(false);
+        }
+        if (tipo == 3) {
+          setValor1(`${valor1}×`);
+          setVerificaMomento(false);
+        }
+        if (tipo == 4) {
+          setValor1(`${valor1}÷`);
+          setVerificaMomento(false);
+        }
       }
     }
-  }
 
-  function apagarUltimo() {
-    setVerificaMomento(true);
-    setValor1(prev => prev.slice(0, -1));
+
+    else if (modo == 4) {
+      setVerificaMomento(true);
+      setValor1(prev => prev.slice(0, -1));
+    }
   }
 
   return (
@@ -84,7 +90,7 @@ export default function AtvCalculador() {
       </View>
       <View style={styles.grid}>
         <View style={styles.gridL1}>
-          <TouchableOpacity style={styles.botoesLine1} onPress={() => limparVisor()}>
+          <TouchableOpacity style={styles.botoesLine1} onPress={() => valueAtual()}>
             <Text style={styles.txtBotoes}>AC</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.botoesLine1}>
@@ -140,7 +146,7 @@ export default function AtvCalculador() {
           </TouchableOpacity>
         </View>
         <View style={styles.gridL5}>
-          <TouchableOpacity style={styles.botoes} onPress={ () => apagarUltimo()}>
+          <TouchableOpacity style={styles.botoes} onPress={() => apagarUltimo()}>
             <Text style={styles.txtBotoes}></Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(0)}>
