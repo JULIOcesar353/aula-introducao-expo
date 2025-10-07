@@ -14,6 +14,7 @@ export default function AtvCalculador() {
   const [valor1, setValor1] = useState('0');
   const [valor2, setValor2] = useState('0');
   const [verificaMomento, setVerificaMomento] = useState(true);
+  let symbol = ["+", "-", "×", "÷"];
 
   const scrollRef = useRef(null);
 
@@ -43,19 +44,19 @@ export default function AtvCalculador() {
     else if (modo == 3) {
       if (verificaMomento) {
         if ((tipo == 1)) {
-          setValor1(`${valor1}+`);
+          setValor1(`${valor1}${symbol[0]}`);
           setVerificaMomento(false);
         }
         if (tipo == 2) {
-          setValor1(`${valor1}−`);
+          setValor1(`${valor1}${symbol[1]}`);
           setVerificaMomento(false);
         }
         if (tipo == 3) {
-          setValor1(`${valor1}×`);
+          setValor1(`${valor1}${symbol[2]}`);
           setVerificaMomento(false);
         }
         if (tipo == 4) {
-          setValor1(`${valor1}÷`);
+          setValor1(`${valor1}${symbol[3]}`);
           setVerificaMomento(false);
         }
       }
