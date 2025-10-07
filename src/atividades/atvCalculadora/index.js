@@ -90,7 +90,7 @@ export default function AtvCalculador() {
       </View>
       <View style={styles.grid}>
         <View style={styles.gridL1}>
-          <TouchableOpacity style={styles.botoesLine1} onPress={() => valueAtual()}>
+          <TouchableOpacity style={styles.botoesLine1} onPress={() => valueAtual(null, 2)}>
             <Text style={styles.txtBotoes}>AC</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.botoesLine1}>
@@ -99,57 +99,57 @@ export default function AtvCalculador() {
           <TouchableOpacity style={styles.botoesLine1}>
             <Text style={styles.txtBotoes}>%</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoesColumn4} onPress={() => operacoes(4)}>
+          <TouchableOpacity style={styles.botoesColumn4} onPress={() => valueAtual(null, 3, 4)}>
             <Text style={styles.txtBotoes}>÷</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.gridL2}>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(7)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(7, 1)}>
             <Text style={styles.txtBotoes}>7</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(8)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(8, 1)}>
             <Text style={styles.txtBotoes}>8</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(9)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(9, 1)}>
             <Text style={styles.txtBotoes}>9</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoesColumn4} onPress={() => operacoes(3)}>
+          <TouchableOpacity style={styles.botoesColumn4} onPress={() => valueAtual(null, 3, 3)}>
             <Text style={styles.txtBotoes}>×</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.gridL3}>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(4)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(4, 1)}>
             <Text style={styles.txtBotoes}>4</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(5)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(5, 1)}>
             <Text style={styles.txtBotoes}>5</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(6)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(6, 1)}>
             <Text style={styles.txtBotoes}>6</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoesColumn4} onPress={() => operacoes(2)}>
+          <TouchableOpacity style={styles.botoesColumn4} onPress={() => valueAtual(null, 3, 2)}>
             <Text style={styles.txtBotoes}>−</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.gridL4}>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(1)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(1, 1)}>
             <Text style={styles.txtBotoes}>1</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(2)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(2, 1)}>
             <Text style={styles.txtBotoes}>2</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(3)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(3, 1)}>
             <Text style={styles.txtBotoes}>3</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoesColumn4} onPress={() => operacoes(1)}>
+          <TouchableOpacity style={styles.botoesColumn4} onPress={() => valueAtual(null, 3, 1)}>
             <Text style={styles.txtBotoes}>+</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.gridL5}>
-          <TouchableOpacity style={styles.botoes} onPress={() => apagarUltimo()}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(null, 4)}>
             <Text style={styles.txtBotoes}></Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(0)}>
+          <TouchableOpacity style={styles.botoes} onPress={() => valueAtual(0, 1)}>
             <Text style={styles.txtBotoes}>0</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.botoes}>
