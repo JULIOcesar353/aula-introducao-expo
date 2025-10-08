@@ -15,6 +15,7 @@ export default function AtvCalculador() {
   const [valor2, setValor2] = useState('0');
   const [verificaMomento, setVerificaMomento] = useState(true);
   let symbol = ["+", "-", "×", "÷"];
+  let valores = ["", ""];
 
   const scrollRef = useRef(null);
 
@@ -27,8 +28,10 @@ export default function AtvCalculador() {
       if (substituir) {
         setValor1(String(val)); // substitui o visor
         setSubstituir(false);
+
       } else {
         setValor1(prev => prev + String(val)); // opcional, concatena após o primeiro número
+        setVerificaMomento(true);
       }
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 0);
     }
@@ -46,18 +49,48 @@ export default function AtvCalculador() {
         if ((tipo == 1)) {
           setValor1(`${valor1}${symbol[0]}`);
           setVerificaMomento(false);
+          valores[0] = parseFloat(valor1);
+          setValor1(0);
         }
         if (tipo == 2) {
           setValor1(`${valor1}${symbol[1]}`);
           setVerificaMomento(false);
+          valores[0] = parseFloat(valor1);
         }
         if (tipo == 3) {
           setValor1(`${valor1}${symbol[2]}`);
           setVerificaMomento(false);
+          valores[0] = parseFloat(valor1);
         }
         if (tipo == 4) {
           setValor1(`${valor1}${symbol[3]}`);
           setVerificaMomento(false);
+          valores[0] = parseFloat(valor1);
+        }
+        console.log(valores);
+      }
+
+      if (verificaMomento == false) {
+        if ((tipo == 1)) {
+          setValor1(`${valor1}`);
+
+          setVerificaMomento(true);
+          valores[1] = parseFloat(valor2);
+        }
+        if (tipo == 2) {
+          setValor1(`${valor1}${symbol[1]}`);
+          setVerificaMomento(false);
+          valores[0] = parseFloat(valor1);
+        }
+        if (tipo == 3) {
+          setValor1(`${valor1}${symbol[2]}`);
+          setVerificaMomento(false);
+          valores[0] = parseFloat(valor1);
+        }
+        if (tipo == 4) {
+          setValor1(`${valor1}${symbol[3]}`);
+          setVerificaMomento(false);
+          valores[0] = parseFloat(valor1);
         }
       }
     }
@@ -66,6 +99,12 @@ export default function AtvCalculador() {
     else if (modo == 4) {
       setVerificaMomento(true);
       setValor1(prev => prev.slice(0, -1));
+    }
+  }
+
+  function funcCalcula() {
+    if (verificaMomento == false) {
+
     }
   }
 
@@ -156,7 +195,7 @@ export default function AtvCalculador() {
           <TouchableOpacity style={styles.botoes}>
             <Text style={styles.txtBotoes}>,</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.botoesColumn4}>
+          <TouchableOpacity style={styles.botoesColumn4} onPress={() => funcCalcula()}>
             <Text style={styles.txtBotoes}>=</Text>
           </TouchableOpacity>
         </View>
