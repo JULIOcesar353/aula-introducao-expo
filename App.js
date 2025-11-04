@@ -19,12 +19,14 @@ import Atividade4 from './src/atividades/atv04';
 
 import Atividade5 from './src/atividades/atv05';
 
+import Atividade8 from './src/atividades/atv08';
+
 import AtvCalculador from './src/atividades/atvCalculadora';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <AtvCalculador/>
+      <Atividade8/>
       <StatusBar style="auto" />
     </View>
   );
